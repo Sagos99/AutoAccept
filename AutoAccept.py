@@ -305,4 +305,4 @@ def select(status):
             sleep(action_time)
             select('csgo')
 
-select('find_match')
+select('play')
