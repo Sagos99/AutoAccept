@@ -1,1 +1,1 @@
-python AutoAccept.py
+python3.8 main.py
