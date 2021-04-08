@@ -12,4 +12,4 @@ lane = 'sup/mid'
 3 - Ranqueada Solo/Duo
 4 - Ranqueada Flexível
 '''
-mode = 3
+mode = 4

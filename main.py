@@ -1,7 +1,7 @@
 '''
     Segunda tentativa do script de auto accept para o LoL
     Criado dia 26/12/2019
-    Funcionando na versão: 10.6
+    Funcionando na versão: 10.15
 '''
 
 from multiprocessing import Process
@@ -51,12 +51,16 @@ def create_match(x,y):
 
     if mode == 1:
         click_mouse(blindly[0],blindly[1])
+        print('Selecionado: Escolha às cegas')
     elif mode == 2:
         click_mouse(alternate[0],alternate[1])
+        print('Selecionado: Escolha alternada')
     elif mode == 3:
         click_mouse(solo_duo[0],solo_duo[1])
+        print('Selecionado: Ranqueada Solo/Duo')
     elif mode == 4:
         click_mouse(flex[0],flex[1])
+        print('Selecionado: Ranqueada Flexível')
 
     sleep(0.5)
     click_mouse(button_confirm[0],button_confirm[1])
@@ -76,6 +80,7 @@ def select_lane():
     pyautogui.moveTo(520,482)
     pyautogui.mouseDown(button='left')
     
+    print('Escolhendo as lanes')
     if len(lane) == 1:
         if lane[0] != 'preencher':
             if lane[0] == 'top':
@@ -134,6 +139,7 @@ def select_lane():
 
     sleep(1.5)
     click_mouse(button_confirm[0],button_confirm[1])
+    print('Entrou na fila')
     watch_button_accept()
 
 
@@ -194,6 +200,7 @@ def watch_button_ban():
             x, y = None,None
 
         if x and y:
+            print('Banindo '+str(ban))
             click_mouse(search_champ[0], search_champ[1])
             pyautogui.write(ban)
             sleep(1.5)
@@ -214,6 +221,7 @@ def watch_button_confirm():
             x, y = None,None
 
         if x and y:
+            print('Escolhendo '+str(champ))
             click_mouse(search_champ[0], search_champ[1])
             pyautogui.write(champ)
             sleep(1.5)
